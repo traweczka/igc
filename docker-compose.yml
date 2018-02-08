@@ -6,3 +6,8 @@ services:
      - "80:80"
     volumes:
      - .:/var/www/igc
+    links:
+      - redis:tagme-redis
+
+  redis:
+    image: redis:latest
